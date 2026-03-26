@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import AppCard from "../components/AppCard";
 import Loading from "../components/Loading";
 import appsData from "../data/apps";
+import appError from "../assets/App-Error.png"
 
 const Apps = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -41,8 +42,9 @@ const Apps = () => {
         <Loading />
       ) : filteredApps.length === 0 ? (
         <div className="text-center py-20">
-          <h3 className="text-3xl font-medium text-gray-400">No App Found</h3>
-          <p className="text-gray-500 mt-4">Try searching with different keywords</p>
+          <div className="w-72 mx-auto mb-6"> <img src={appError} alt="appError" /></div>
+         
+          <p className="text-3xl text-gray-500 mt-4">Try searching with different keywords</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

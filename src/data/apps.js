@@ -179,7 +179,7 @@ export const appsData = [
       { name: "1 star", count: 400 }
     ]
   }
-  // You can add more if you want, but 10+ is enough. I kept 10 for clean code.
+  
 ];
 
 export default appsData;
